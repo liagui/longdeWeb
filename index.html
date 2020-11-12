@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>龙德在线</title>
+    <link rel="Bookmark" href="__ROOT__/favicon.ico">
+    <meta name="viewport" id="view"
+        content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no, initial-scale=0" />
+    <meta name="keywords" content="龙德在线" />
+    <meta name="referrer" content="never">
+    <meta name="description" content="龙德在线" />
+    <script src="http://frontdeskresources.longde999.cn/lib/tmpl.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://unpkg.com/element-ui@2.9.2/lib/theme-chalk/index.css"> -->
+    <!-- <script src="https://cdn.vaptcha.com/v.js"></script> -->
+
+</head>
+
+<body>
+    <div id='app'></div>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+    <!-- <script src="https://unpkg.com/vue@2.5.2/dist/vue.js"></script>
+    <script src="https://unpkg.com/vuex@3.0.1/dist/vuex.js"></script>
+    <script src="https://unpkg.com/element-ui@2.9.2/lib/index.js"></script>
+    <script src="https://unpkg.com/axios@0.18.0/dist/axios.min.js"></script> -->
+    <!-- <div id="app"></div> -->
+    <script id="template-upload" type="text/x-tmpl">
+  {% for (var i=0, file; file=o.files[i]; i++) { %}
+      <tr class="template-upload">
+          <td style="width:300px;">
+              <p class="name" style="margin-top: 6px;">{%=file.name%}</p>
+              <strong class="error text-danger"></strong>
+          </td>
+                <td>
+                   <p  style="margin-top: 6px;">{%=file.extendName%}</p>
+                </td>
+                <td>
+                   <p  style="margin-top: 6px;" title="{%=file.categoryDesc%}">{%=file.shortCategoryDesc%}</p>
+                </td>
+          <td style="width:80px;">
+              <p class="size" style="margin-top: 6px;">处理中...</p>
+          </td>
+  		<td class="progressbar">
+  			<div style="margin-top:6px;margin-bottom:4px;margin-left: 20px;width:150px;display:inline-block;" class="progress progress-striped active mb0 tc_rel" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+  				<div class="progress-bar progress-bar-success" style="width:0%;"></div>
+  				<div style="margin-top: 1px;" class="tc tc_pos upload_percent progress-u">0%</div>
+  			</div>
+  			<span class="rate" style="vertical-align:super; margin-top:6px; margin-left: 20px;display:inline-block;"></span>
+  		</td>
+          <td style="" class="operate">
+              {% if (!i && !o.options.autoUpload) { %}
+                  <button class="btn btn-primary btn-xs start" style="margin-top:3px;" disabled>
+                      <i class="glyphicon glyphicon-upload"></i>
+                      <span>开始上传</span>
+                  </button>
+              {% } %}
+              {% if (!i) { %}
+                  <button class="btn btn-warning btn-xs cancel" style="margin-top:3px;">
+                      <i class="glyphicon glyphicon-ban-circle"></i>
+                      <span>取消</span>
+                  </button>
+              {% } %}
+  			{% if (!i) { %}
+                  <button class="btn btn-primary btn-xs" id="pause" style="margin-top:3px;" disabled>
+                      <i class="glyphicon glyphicon-ban-circle"></i>
+                      <span>暂停</span>
+                  </button>
+              {% } %}
+  			{% if (!i) { %}
+                  <button class="btn btn-primary btn-xs" id="resume" style="display:none; margin-top:3px;">
+                      <i class="glyphicon glyphicon-upload"></i>
+                      <span>续传</span>
+                  </button>
+              {% } %}
+          </td>
+  		<td width="0%" style="display:none">
+              <input id="isPause" value="false">
+          </td>
+      </tr>
+  {% } %}
+    </script>
+</body>
+
+</html>

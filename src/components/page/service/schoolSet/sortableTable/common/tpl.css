@@ -1,0 +1,44 @@
+/* tpl_common */
+
+
+/* option-item */
+.option-item {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  color: #666666;
+  height: 50px;
+}
+.option-item .label {
+  flex-shrink: 0;
+  width: 75px;
+  text-align: right;
+}
+.option-item .el-radio {
+  margin-top: 7.5px;
+}
+.option-item .el-checkbox {
+  margin-top: 7.5px;
+}
+.option-item .el-input {
+  width: 100%;
+  min-width: 200px;
+}
+.option-item .el-slider {
+  width: 400px;
+}
+.option-item /deep/ .el-upload--text {
+  border: none;
+}
+/* tool-button */
+.tool-button {
+  margin-top: 75px;
+  padding-right: 30px;
+  display: flex;
+  justify-content: flex-end;
+}
+.tool-button .el-button {
+  border-color: #ee7f58;
+  background-color: #ee7f58;
+  color: #fff;
+}

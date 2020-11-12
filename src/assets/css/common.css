@@ -1,0 +1,122 @@
+/* 浮动 */
+.fl{float: left;}
+.fr{float: right;}
+.clearfix{zoom: 1;overflow: hidden;}
+.clearfix::after{content: '';display: block;clear: both;}
+.cb{clear: both;}
+/* 对齐 */
+.text-l{text-align: left}
+.text-r{text-align: right}
+.text-c{text-align: center}
+.vertical-t{vertical-align: top;}
+.vertical-m{vertical-align: middle;}
+.vertical-b{vertical-align: bottom;}
+
+/*显示隐藏*/
+.block{display: inline-block !important;}
+.none{display: none !important;}
+.visible-none {
+    visibility: hidden;
+}
+.visible {
+    visibility: visible !important;
+}
+/* 重置样式 */
+.form-none .el-input__inner{
+    border-color: transparent !important;
+    background-color: transparent !important;
+}
+.form-none-active .el-input__inner{
+    border-color: rgb(220, 223, 230) !important;
+    background-color: #fff !important;
+}
+.edit-form{
+    border-bottom: solid 1px #eaeaea;
+}
+.edit-dialog .dialog-footer {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+.edit-dialog .el-form-item--mini.el-form-item, .edit-dialog .el-form-item--small.el-form-item{
+    margin-bottom: 10px;
+}
+
+/* box外边距 */
+.item-padding .el-form-item__content{padding-top: 4px;}
+.box-margin{
+    margin-right: 25px;
+}
+
+.tab-wrap{
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.tab-group{
+    display: inline-block;
+    flex: 1;
+}
+.tab-group span {
+    display: inline-block;
+    height: 28px;
+    padding: 0 12px;
+    line-height: 28px;
+    cursor: pointer;
+    color: #666666;
+    background: #F9F9F9;
+    font-size: 14px;
+    border-top: 1px solid #E8E8E8;
+    border-bottom: 1px solid #E8E8E8;
+    border-right: 1px solid #E8E8E8;
+    float: left;
+}
+
+.tab-group span.active {
+    background: linear-gradient(90deg,
+            rgba(38, 164, 253, 1),
+            rgba(0, 142, 242, 1));
+    color: rgba(254, 254, 254, 1);
+    border-color: #26A4FD;
+}
+.tab-group span:last-child{
+    border-radius: 0 3px 3px 0;
+}
+.tab-group span:first-child{
+    border-left: 1px solid #E8E8E8;
+    border-right: 1px solid #E8E8E8;
+    border-radius: 3px 0 0 3px;
+}
+.tab-group::after{
+    display: block;
+    content: "";
+    clear: both;
+}
+.tab-group+.rightBtnBox{
+    display: inline-block;
+}
+
+.form-item {
+  min-height: 30px;
+  line-height: 30px;
+  margin: 10px 0;
+  display: flex;
+}
+.form-item>label{
+    width: 120px;
+    text-align: right;
+}
+.form-item>div{
+    flex: 1;
+}
+.form-item  ol{
+    list-style-type: decimal;
+    padding-left: 16px;
+    margin-bottom: 0;
+}
+.form-item  ol>li{
+    list-style: decimal;
+}
